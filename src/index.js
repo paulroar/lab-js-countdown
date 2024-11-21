@@ -42,10 +42,10 @@ function showToast(message) {
 
   // BONUS: ITERATION 4: TOAST CLOSE BUTTON
   // Your code goes here ...
-  const closeToast = document.querySelector('#close-toast');
-  closeToast.addEventListener('click', () => {
+  const closeToast = document.querySelector("close-toast");
+  closeToast.addEventListener("click", () => {
+    toastElement.classList.remove("show");
     clearTimeout(timeout);
-    toastElement.classList.remove('show');
   });
 
 }
