@@ -35,16 +35,17 @@ function showToast(message) {
   console.log("showToast called!");
   // Your code goes here ...
   const toastElement = document.getElementById("toast");
-toastElement.classList.add("show");
-setTimeout(() =>{
-  toastElement.classList.remove("show");
+  toastElement.classList.add("show");
+  setTimeout(() => {
+    toastElement.classList.remove("show");
   }, 3000);
 
   // BONUS: ITERATION 4: TOAST CLOSE BUTTON
   // Your code goes here ...
-  toast.addEventListener("click", () => {
-    clearTimeout(setTimeout); // Cancel the auto-hide timeout
-    toast.classList.remove("show"); // Hide the toast immediately
-});
-  
+  const closeToast = document.querySelector('#close-toast');
+  closeToast.addEventListener('click', () => {
+    clearTimeout(timeout);
+    toastElement.classList.remove('show');
+  });
+
 }
