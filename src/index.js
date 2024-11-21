@@ -24,7 +24,7 @@ timer = setInterval(() => {
     remainingTime--;
   } else {
     clearInterval(timer);
-    showToast();
+    showToast(" Lift off! 🚀");
   }},1000);
  
   };
@@ -34,10 +34,10 @@ timer = setInterval(() => {
 function showToast(message) {
   console.log("showToast called!");
   // Your code goes here ...
-document.getElementById("toast");
-toast.classList.add("show");
+  const toastElement = document.getElementById("toast");
+toastElement.classList.add("show");
 setTimeout(() =>{
-  toast.classList.remove("show");
+  toastElement.classList.remove("show");
   }, 3000);
 
   // BONUS: ITERATION 4: TOAST CLOSE BUTTON
